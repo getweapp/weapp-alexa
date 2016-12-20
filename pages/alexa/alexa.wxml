@@ -1,0 +1,164 @@
+<view class="page">
+   
+   <view class="section__title" style = "color:grey;margin-top:10px">基本信息</view>
+ 
+ <view class="section-body">
+<text>站点域名：{{ alexa.domain }}</text>
+ 
+<text>全球流量排名：{{ alexa.traffic_rank }}</text>
+ 
+<text>综合排名：{{ alexa.pagerank }}</text>
+
+<text>平均日IP：{{ alexa.daily_ip }}</text>
+ 
+<text>平均日PV：{{ alexa.daily_pv }}</text>
+ 
+<text>反向链接：{{ alexa.backlinks }}</text>
+ </view>
+            
+   <!-- 横向分割线 -->
+  
+   <view class = "home-view-sep-hor" style = "display: inline-block;"></view>
+   <view class = "home-view-sep-hor" style = "margin-bottom:8px;margin-top:0px;border-bottom: 1px solid #e2e2e2;"></view>
+    
+  <view class="section__title" style = "color:grey;margin-top:10px">流量信息</view>
+
+  <view class="section-body-2" wx:for="{{ alexa.traffic_data }}" wx:key="item.time_range">
+<text class="section-body-2-title">{{ item.time_range }}</text>
+<text>流量排名：{{ item.traffic_rank }}</text>
+<text>到访量排名：{{ item.reach_rank }}</text>
+<text>每百万人中访问人数：{{ item.reach_permillion }}</text>
+<text>页面访问量排名：{{ item.pageviews_rank }}</text>
+<text>每百万人访问页面中访问本站的页面数：{{ item.pageviews_permillion }}</text>
+<text>平均每个访问者浏览的页面数：{{ item.pageviews_peruser }}</text>
+ </view>
+
+ <!-- 横向分割线 -->
+  
+   <view class = "home-view-sep-hor" style = "display: inline-block;"></view>
+   <view class = "home-view-sep-hor" style = "margin-bottom:8px;margin-top:0px;border-bottom: 1px solid #e2e2e2;"></view>
+    
+  <view class="section__title" style = "color:grey;margin-top:10px">区域信息</view>
+
+  <view class="section-body-2" wx:for="{{ alexa.country_data }}" wx:key="item.country">
+<text class="section-body-2-title">{{ item.country }}</text>
+<text>国家代号：{{ item.code }}</text>
+<text>排名：{{ item.rank }}</text>
+<text>访问比例：{{ item.users }}</text>
+<text>页面访问比例：{{ item.pageviews }}</text>
+ </view>
+
+ <!-- 横向分割线 -->
+  
+   <view class = "home-view-sep-hor" style = "display: inline-block;"></view>
+   <view class = "home-view-sep-hor" style = "margin-bottom:8px;margin-top:0px;border-bottom: 1px solid #e2e2e2;"></view>
+    
+  <view class="section__title" style = "color:grey;margin-top:10px">子站点信息</view>
+
+  <view class="section-body-2" wx:for="{{ alexa.subdomains_data }}" wx:key="item.subdomain">
+<text class="section-body-2-title">{{ item.subdomain }}</text>
+<text>网站访问比率：{{ item.reach_percentage }}</text>
+<text>页面访问比率：{{ item.pageviews_percentage }}</text>
+<text>页面浏览量：{{ item.pageviews_peruser }}</text>
+ </view>
+  
+ <!-- 横向分割线 -->
+  
+   <view class = "home-view-sep-hor" style = "display: inline-block;"></view>
+   <view class = "home-view-sep-hor" style = "margin-bottom:8px;margin-top:0px;border-bottom: 1px solid #e2e2e2;"></view>
+    
+  <view class="section__title" style = "color:grey;margin-top:10px">排名走势图</view>
+ 
+
+  <view class="section-body-2">近6个月排名走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.rank_graph.six_months }}"></image>
+  </view>
+
+  <view class="section-body-2">近3个月排名走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.rank_graph.three_months }}"></image>
+  </view>
+
+  <view class="section-body-2">近1个月排名走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.rank_graph.one_month }}"></image>
+  </view>
+
+  <view class="section-body-2">近半个月排名走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.rank_graph.two_weeks }}"></image>
+  </view>
+
+  <view class="section-body-2">近1周排名走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.rank_graph.one_week }}"></image>
+  </view>
+
+  <!-- 横向分割线 -->
+  
+   <view class = "home-view-sep-hor" style = "display: inline-block;"></view>
+   <view class = "home-view-sep-hor" style = "margin-bottom:8px;margin-top:0px;border-bottom: 1px solid #e2e2e2;"></view>
+    
+  <view class="section__title" style = "color:grey;margin-top:10px">到访量走势图</view>
+ 
+
+  <view class="section-body-2">近6个月到访量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.reach_graph.six_months }}"></image>
+  </view>
+
+  <view class="section-body-2">近3个月到访量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.reach_graph.three_months }}"></image>
+  </view>
+
+  <view class="section-body-2">近1个月到访量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.reach_graph.one_month }}"></image>
+  </view>
+
+  <view class="section-body-2">近半个月到访量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.reach_graph.two_weeks }}"></image>
+  </view>
+
+  <view class="section-body-2">近1周到访量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.reach_graph.one_week }}"></image>
+  </view>
+
+  <!-- 横向分割线 -->
+  
+   <view class = "home-view-sep-hor" style = "display: inline-block;"></view>
+   <view class = "home-view-sep-hor" style = "margin-bottom:8px;margin-top:0px;border-bottom: 1px solid #e2e2e2;"></view>
+    
+  <view class="section__title" style = "color:grey;margin-top:10px">浏览量走势图</view>
+ 
+
+  <view class="section-body-2">近6个月浏览量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.pageviews_graph.six_months }}"></image>
+  </view>
+
+  <view class="section-body-2">近3个月浏览量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.pageviews_graph.three_months }}"></image>
+  </view>
+
+  <view class="section-body-2">近1个月浏览量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.pageviews_graph.one_month }}"></image>
+  </view>
+
+  <view class="section-body-2">近半个月浏览量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.pageviews_graph.two_weeks }}"></image>
+  </view>
+
+  <view class="section-body-2">近1周浏览量走势图</view>
+  <view class="p-10">
+  <image class="trafic-image" src="{{ alexa.pageviews_graph.one_week }}"></image>
+  </view>
+
+</view>

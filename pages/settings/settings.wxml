@@ -1,0 +1,14 @@
+<view class="page">
+<scroll-view scroll-y="true" style="height: 100%;">
+  <view class="page__bd">
+    <view class="section" style="margin-top: 5%;" >
+      <!--<icon type="search" size="25" />-->
+     <input  placeholder="输入域名（不带http://）" value="{{ inputValue }}" bindinput="bindSearchInput"  maxlength="50"/>
+    </view>
+    <view style="display:flex;">
+      <button bindtap="save" class = "searchbutton" type="primary">保存网站</button>
+      </view>
+    </view>
+  
+  </scroll-view>
+</view>

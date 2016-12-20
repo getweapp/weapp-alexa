@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/alexa/alexa",
+    "pages/settings/settings"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "rgb(3,197,255)",
+    "navigationBarTitleText": "Alexa排名",
+    "navigationBarTextStyle":"light"
+  },
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "rgb(3,197,255)",
+    "backgroundColor": "#fdfdfd",
+    "borderStyle": "black",
+    "position":"bottom",
+    "list": [{
+      "pagePath": "pages/alexa/alexa",
+      "text": "Alexa排名",
+      "iconPath": "images/Chart.png",
+      "selectedIconPath": "images/Chart_active.png"
+    },
+    {
+      "pagePath": "pages/settings/settings",
+      "text": "网站设置",
+      "iconPath": "images/Setup.png",
+      "selectedIconPath": "images/Setup_active.png"
+    }
+    ]
+  },
+  "debug":true
+}
